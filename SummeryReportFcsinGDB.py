@@ -46,21 +46,26 @@ with open(projectname + "_SummeryReport.txt", "w") as SummeryReport, open(projec
 
 
 
+
+
        fields = arcpy.ListFields(fc)
        for field in fields:
             Fname= field.name
-            cur = arcpy.da.SearchCursor(fc)
-            NotnullCount = 0
-            for row in cur:
-                if ('OBJECTID','SHAPE','SHAPE_Length','SHAPE_Area' ) not in Fname  and not row.getValue(Fname) in [None, " ", "",0]:
-                    NotnullCount += 1
-                arcpy.AddMessage ("-{},{},{},{}\n".format(fc.encode('utf-8'),Fname,str(Tcount),str(NotnullCount)))
-                AttrbuteCompletness.write("{},{},{},{}\n".format(fc.encode('utf-8'),Fname,str(Tcount),str(NotnullCount)))
-            arcpy.AddMessage("**Done Attribute compleness report")
+            if Fname not in ('OBJECTID','SHAPE','SHAPE_Length','SHAPE_Area','Shape','Shape_Length' ,'Shape_Area'):    #Put list of fiels that is not required in report- it helps in run faster
+                cur = arcpy.SearchCursor(fc)
+                NotnullCount = 0
+                for row in cur:
+                    if not row.getValue(Fname) in [None, " ", "",0]:
+                        NotnullCount += 1
+                    arcpy.AddMessage ("-{},{},{},{}\n".format(fc.encode('utf-8'),Fname,str(Tcount),str(NotnullCount)))
+                    AttrbuteCompletness.write("{},{},{},{}\n".format(fc.encode('utf-8'),Fname,str(Tcount),str(NotnullCount)))
+                arcpy.AddMessage("**Done Attribute compleness report")
+                arcpy.AddMessage ("-{},{},{},{}\n".format(fc.encode('utf-8'), desc.spatialReference.name , desc.shapeType,Tcount))
 
-       arcpy.AddMessage ("-{},{},{},{}\n".format(fc.encode('utf-8'), desc.spatialReference.name , desc.shapeType,Tcount))
-       SummeryReport.write ("{},{},{},{}\n".format(fc.encode('utf-8'),desc.spatialReference.name , desc.shapeType, Tcount) )
-       arcpy.AddMessage("**Done SummeryReport")
+                SummeryReport.write ("{},{},{},{}\n".format(fc.encode('utf-8'),desc.spatialReference.name , desc.shapeType, Tcount) )
+                arcpy.AddMessage("**Done SummeryReport")
+
+
 
 
 
