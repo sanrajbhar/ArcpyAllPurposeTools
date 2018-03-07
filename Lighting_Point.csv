@@ -1,0 +1,84 @@
+Additional_Asset_Information,TEXT,,,255,Additional Asset Information
+Agents_Record_Number,TEXT,,,255,Agents Record Number
+Asset_ID,TEXT,,,255,Asset ID
+Asset_Location_Text,TEXT,,,500,Asset Location Text
+Attachments,TEXT,,,255,Attachments
+Bracket_Projection,DOUBLE,,,8,Bracket Projection
+CMS_Unit_Reference,TEXT,,,255,CMS Unit Reference
+Column_Bracket,TEXT,,,255,Column Bracket
+Column_Cross_Section,TEXT,,,255,Column Cross Section
+Column_Expected_Service_Life,DOUBLE,,,8,Column Expected Service Life
+Column_Fixing,TEXT,,,255,Column Fixing
+Column_Location,TEXT,,,255,Column Location
+Column_Manufacturer,TEXT,,,255,Column Manufacturer
+Column_Material,TEXT,,,255,Column Material
+Column_Root_Protection,TEXT,,,255,Column Root Protection
+Column_Type,TEXT,,,255,Column Type
+Condition_Rating_(Manual),DOUBLE,,,8,Condition Rating (Manual)
+Control_Charge_Code,DOUBLE,,,13,Control Charge Code
+Control_Gear_Type,TEXT,,,255,Control Gear Type
+Current_Maintenance_Contract,TEXT,,,255,Current Maintenance Contract
+Currently_Maintained_By,TEXT,,,255,Currently Maintained By
+Date_of_Installation,DATE,,,8,Date of Installation
+Departure_-_DAS_ID,TEXT,,,255,Departure - DAS ID
+Designed_for_Fatigue,TEXT,,,255,Designed for Fatigue
+DNO_Name,TEXT,,,255,DNO Name
+End_Chainage,DOUBLE,4,1,8,End Chainage
+End_Date,DATE,,,8,End Date
+Environment_Situation,TEXT,,,255,Environment Situation
+Equipment_Charge_Code,DOUBLE,,,13,Equipment Charge Code
+Exit_Point_Capacity_if_>3KVA,DOUBLE,,,8,Exit Point Capacity if >3KVA
+External_Influences,TEXT,,,255,External Influences
+Flange_Base,TEXT,,,255,Flange Base
+Gateway_/_Collector_/_Segment_Control_Type,TEXT,,,255,Gateway / Collector / Segment Control Type
+Gateway_Charge_Code,DOUBLE,,,8,Gateway Charge Code
+Gear_Type,TEXT,,,255,Gear Type
+Grid_Ref._of_Exit_Point,TEXT,,,255,Grid Ref. of Exit Point
+Grid_Reference_Letters,TEXT,,,255,Grid Reference Letters
+Grid_Supply_Point,TEXT,,,255,Grid Supply Point
+Ground_Drainage_Type,TEXT,,,255,Ground Drainage Type
+Ground_Surface_Type,TEXT,,,255,Ground Surface Type
+HE_Area_Number,DOUBLE,,,2,HE Area Number
+Individual_or_Group_Control,TEXT,,,255,Individual or Group Control
+Is_Item_An_Exit_Point,TEXT,,,255,Is Item An Exit Point
+Item_Class_Code,TEXT,,,255,Item Class Code
+Exit_Point_Capacity_if_3KVA,TEXT,,,255,Exit_Point_Capacity_if_3KVA
+Lamp_Max_Wattage,DOUBLE,,,8,Lamp Max Wattage
+Lamp_Type,TEXT,,,255,Lamp Type
+Lantern_Distribution,TEXT,,,255,Lantern Distribution
+Lantern_Manufacturer,TEXT,,,255,Lantern Manufacturer
+Lantern_Model_Reference,TEXT,,,255,Lantern Model Reference
+Lantern_Protection,TEXT,,,255,Lantern Protection
+Lantern_Setting,TEXT,,,255,Lantern Setting
+Last_Detailed_Inspection,DATE,,,8,Last Detailed Inspection
+Last_Electrical_Test,DATE,,,8,Last Electrical Test
+Last_Lamp_Change_Date,DATE,,,8,Last Lamp Change Date
+Metered_or_Unmetered,TEXT,,,255,Metered or Unmetered
+Mounting_Bracket,TEXT,,,255,Mounting Bracket
+Mounting_Height_(m),DOUBLE,,,8,Mounting Height (m)
+No_of_PECUs,DOUBLE,,,8,No of PECUs
+Number_Of_Brackets,DOUBLE,,,8,Number Of Brackets
+Number_of_Controls,DOUBLE,,,8,Number of Controls
+Number_of_Lamps,DOUBLE,,,8,Number of Lamps
+Operating_Percent_Per_Day,DOUBLE,,,8,Operating Percent Per Day
+Owner,TEXT,,,255,Owner
+Paint_Colour,TEXT,,,255,Paint Colour
+PECU_Lux_Off,DOUBLE,,,8,PECU Lux Off
+PECU_Lux_On,DOUBLE,,,8,PECU Lux On
+PECU_Type,TEXT,,,255,PECU Type
+Protective_Coating,TEXT,,,255,Protective Coating
+Reference_-_Feeder_Pillar_ID,TEXT,,,255,Reference - Feeder Pillar ID
+Reference_-_SNSF_ID,DOUBLE,,,8,Reference - SNSF ID
+Risk_Rating,DOUBLE,,,8,Risk Rating
+Road_Name_/_Number,TEXT,,,255,Road Name / Number
+Source_ID,TEXT,,,10,Source ID
+Start_Chainage,DOUBLE,4,1,8,Start Chainage
+Start_Date,DATE,,,8,Start Date
+Switch_Regime,TEXT,,,3,Switch Regime
+Switch_Type,TEXT,,,255,Switch Type
+Time_off,TEXT,,,255,Time off
+Time_on,TEXT,,,255,Time on
+Town_/_Parish_/_District,TEXT,,,255,Town / Parish / District
+Wind_Exposure,TEXT,,,255,Wind Exposure
+X_(Easting),DOUBLE,9,3,8,X (Easting)
+Y_(Northing),DOUBLE,9,3,8,Y (Northing)

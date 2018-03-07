@@ -1,0 +1,32 @@
+Additional_Asset_Information,TEXT,,,255,Additional Asset Information
+Asset_Location_Text,TEXT,,,500,Asset Location Text
+Condition_Rating_(Manual),DOUBLE,,,255,Condition Rating (Manual)
+Current_Maintenance_Contract,TEXT,,,255,Current Maintenance Contract
+Currently_Maintained_By,TEXT,,,255,Currently Maintained By
+Date_of_Installation,DATE,,,255,Date of Installation
+Departure_-_DAS_ID,TEXT,,,255,Departure - DAS ID
+End_Chainage,DOUBLE,4,1,255,End Chainage
+End_Date,DATE,,,8,End Date
+Expected_service_life,DOUBLE,,,255,Expected service life
+Foundation,TEXT,,,255,Foundation
+Ground_Surface_Type,TEXT,,,255,Ground Surface Type
+Height_(m),DOUBLE,,,255,Height (m)
+Manufacturer,TEXT,,,255,Manufacturer
+Material,TEXT,,,255,Material
+Mounting_Installation_Date,DATE,,,255,Mounting Installation Date
+Number_of_Posts,DOUBLE,,,255,Number of Posts
+Owner,TEXT,,,255,Owner
+Passively_Safe,TEXT,,,255,Passively Safe
+Post_Finish,TEXT,,,255,Post Finish
+Product_Name/ID,TEXT,,,255,Product Name/ID
+Risk_Rating,DOUBLE,,,255,Risk Rating
+Section,TEXT,,,15,Section
+SNPS_Reusable?,TEXT,,,255,SNPS Reusable?
+Source_ID,TEXT,,,10,Source ID
+Start_Chainage,DOUBLE,4,1,255,Start Chainage
+Start_Date,DATE,,,8,Start Date
+System_ID,TEXT,,,255,System ID
+Width/Diameter_(cm),DOUBLE,,,255,Width/Diameter (cm)
+X_(Easting),DOUBLE,9,3,255,X (Easting)
+XSP,TEXT,,,3,XSP
+Y_(Northing),DOUBLE,9,3,255,Y (Northing)
