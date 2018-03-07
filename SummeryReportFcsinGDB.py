@@ -49,13 +49,13 @@ def AttrbuteCompletness(projectname, fcs):
            for field in fields:
                 Fname= field.name
                 if Fname not in ('OBJECTID','SHAPE','SHAPE_Length','SHAPE_Area','Shape','Shape_Length' ,'Shape_Area'):    #Put list of fiels that is not required in report- it helps in run faster
-                    cur = arcpy.SearchCursor(fc)
+                    cur = arcpy.SearchCursor(fc)  #da.cursor /getcount not used beacuse we have to deal with numeric and string fields together. if any one of above then its difficult and filter field type and have to pass different query for numeric and dfferent for string
                     NotnullCount = 0
                     for row in cur:
                         if not row.getValue(Fname) in [None, " ", "",0]:
                             NotnullCount += 1
-                        arcpy.AddMessage ("-{},{},{},{}\n".format(fc.encode('utf-8'),Fname,str(Tcount),str(NotnullCount)))
-                        AttrbuteCompletness.write("{},{},{},{}\n".format(fc.encode('utf-8'),Fname,str(Tcount),str(NotnullCount)))
+                    arcpy.AddMessage ("-{},{},{},{}\n".format(fc.encode('utf-8'),Fname,str(Tcount),str(NotnullCount)))
+                    AttrbuteCompletness.write("{},{},{},{}\n".format(fc.encode('utf-8'),Fname,str(Tcount),str(NotnullCount)))
                     #arcpy.AddMessage("**Done Attribute compleness report")
 
 
@@ -80,8 +80,3 @@ arcpy.AddMessage("**-**Done SummeryReport")
 arcpy.AddMessage("**Started Attribute compleness report")
 AttrbuteCompletness(projectname, fcs)
 arcpy.AddMessage("**-**Done Attribute compleness report")
-
-
-
-
-
