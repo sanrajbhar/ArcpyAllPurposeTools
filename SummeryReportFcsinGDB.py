@@ -73,10 +73,10 @@ def SummeryReport(projectname, fcs):
            #arcpy.AddMessage("**Done SummeryReport")
 
 
-arcpy.AddMessage("**Started SummeryReport")
+arcpy.AddMessage("**Started SummeryReport\n")
 SummeryReport(projectname, fcs)
-arcpy.AddMessage("**-**Done SummeryReport")
+arcpy.AddMessage("**-**Done SummeryReport %s_SummeryReport.txt in working folder\n" %projectname)
 
-arcpy.AddMessage("**Started Attribute compleness report")
+arcpy.AddMessage("**Started Attribute compleness report\n")
 AttrbuteCompletness(projectname, fcs)
-arcpy.AddMessage("**-**Done Attribute compleness report")
+arcpy.AddMessage("**-**Done Attribute compleness report %s_AttrbuteCompletness.txt in working folder\n" %projectname)
