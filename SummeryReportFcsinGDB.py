@@ -2,7 +2,7 @@
 # Name:        module1
 # Purpose: Recruisvely get all the FCs, Fcs in Datsets within GDB, with spatial referece, FeatureType, feaureCount.
 #
-# Author:      Sanjaykumar Rajbhar/GEC -Mumbai   -----------------
+# Author:      Sanjaykumar Rajbhar/GEC -Mumbai   --------------------
 #                                                     -------
 # Created:     06/08/2017
 # Copyright:   (c) DELL 2017
