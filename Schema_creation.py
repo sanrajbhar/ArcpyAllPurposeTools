@@ -44,35 +44,38 @@ def replaceClean(text):
 
 
 
+def schemasGen():
+    #reading fdtocreat.csv to create feature Datasets
+    with open ('fdtocreat.csv', 'rb') as fdcsvfile:
+        reader = csv.reader(fdcsvfile)
 
-#reading fdtocreat.csv to create feature Datasets
-with open ('fdtocreat.csv', 'rb') as fdcsvfile:
-    reader = csv.reader(fdcsvfile)
+        listfc=map(tuple,reader)
 
-    listfc=map(tuple,reader)
+        try:
+            for f in listfc:
 
-    try:
-        for f in listfc:
+                inmem_fc = f[0]
+                inmem_geotype = f[1]
+                arcpy.CreateFeatureclass_management('in_memory','inmem_fc',inmem_geotype,'','','',27700)
+                arcpy.AddMessage( "Creating Field for____ " + inmem_fc  )
 
-            inmem_fc = f[0]
-            inmem_geotype = f[1]
-            arcpy.CreateFeatureclass_management('in_memory','inmem_fc',inmem_geotype,'','','',27700)
-            print "Creating Field for____ " + inmem_fc
+                with open (inmem_fc + ".csv", 'rb') as lpolecsv:
+                    reader =csv.reader(lpolecsv)
+                    lpole_fields=map(tuple,reader)
 
-            with open (inmem_fc + ".csv", 'rb') as lpolecsv:
-                reader =csv.reader(lpolecsv)
-                lpole_fields=map(tuple,reader)
+                    for field in lpole_fields:
 
-                for field in lpole_fields:
+                        arcpy.AddMessage( "********" + inmem_fc +' :::::: ' +replaceClean((field)[0]) )
+                        #print field
 
-                    print "********" + inmem_fc +' :::::: ' +replaceClean((field)[0])
-                    #print field
+                        arcpy.AddField_management("in_memory/inmem_fc", replaceClean((field)[0]), field[1],field[2],field[3], replaceClean((field)[4]),'','','','')
 
-                    arcpy.AddField_management("in_memory/inmem_fc", replaceClean((field)[0]), field[1],field[2],field[3], replaceClean((field)[4]),'','','','')
+                        arcpy.FeatureClassToFeatureClass_conversion("in_memory/inmem_fc",Workspace,inmem_fc)
+                    arcpy.Delete_management("in_memory")
+        except Exception as e:
+            e = sys.exc_info()[1]
+            print e
+            arcpy.AddError("Error Occured")
 
-                    arcpy.FeatureClassToFeatureClass_conversion("in_memory/inmem_fc",Workspace,inmem_fc)
-                arcpy.Delete_management("in_memory")
-    except Exception as e:
-        e = sys.exc_info()[1]
-        print e
-        arcpy.AddError("Error Occured")
+arcpy.AddMessage("Process Started..........")
+schemasGen()
