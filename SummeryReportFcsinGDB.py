@@ -37,7 +37,7 @@ projectname = arcpy.GetParameterAsText(1)
 def AttrbuteCompletness(projectname, fcs):
     with open(projectname + "_AttrbuteCompletness.txt", "w") as AttrbuteCompletness:
 
-        AttrbuteCompletness.write("FC,SRC system,GeometryType,TotalCount,NotnullCount\n")
+        AttrbuteCompletness.write("FC,field,TotalCount,NotnullCount\n")
         for fc in fcs:
 
            desc = arcpy.Describe(os.path.join(ws,fc))

@@ -1,0 +1,4 @@
+FC,SRC system,GeometryType,TotalCount 
+Datsets\featureclassinDS,Unknown,Polygon,0
+Dsample,British_National_Grid,Polyline,727
+test_DSC_LTC_DR2_8_SimplifiedRoute_20180717,British_National_Grid,Polyline,91
